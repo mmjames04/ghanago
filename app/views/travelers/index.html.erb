@@ -1,0 +1,21 @@
+<h1>Listing Travelers</h1>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Email</th>
+		<th>Phone</th>
+		<th>Destination</th>
+	</tr>
+
+	<% @travelers.each do |t| %>
+		<tr>
+			<td><%= t.name %></td>
+			<td><%= t.email %></td>
+			<td><%= t.phone %></td>
+			<td><%= t.destination %></td>
+		</tr>
+	<% end %>
+</table>
+
+<a href="/">Home</a>
