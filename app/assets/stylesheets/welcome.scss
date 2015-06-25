@@ -1,20 +1,65 @@
 @import 'susy';
-@import 'font-awesome-sprokets';
+@import 'font-awesome-sprockets';
 @import 'font-awesome';
 @import 'breakpoint';
 
+$susy: (
+	columns: 12,
+	gutters: 1/4,
+	math: fluid,
+	output: float,
+	gutter-position: inside
+);
+
+$mobile: max-width 30em;
+$tablet: 30em 60em;
+$full: 60em;
+
+$small: 12;
+$medium: 10;
+$big: 6;
+
+$small-margin: 3;
+$medium-margin: 1;
+$big-margin: 0;
+
 body {
+	font-family: sans-serif;
+	@include container(80%);
 	box-sizing: border-box;
 	text-align: center;
+}
+
+@include breakpoint($full) {
+	#logo img {
+		height: 15em;
+	}
 
 	table {
+		@include span($small);
+		text-align: center;
+		margin-top: 1em;
+
+	}
+	td {
+		border: solid yellow 1px;
+		background-color: yellow;
+		text-decoration: none;
+
+	}
+	#img_scroll {
+		@include span($small);
 		margin-left: auto;
 		margin-right: auto;
-
-		td {
-			border: solid yellow 1px;
-			background-color: yellow;
-			text-decoration: none;
-		}
+	}
+	iframe {
+		@include span($big);
+		margin-top: 1em;
+	}
+	footer {
+		display: inline-block;
+		@include span($small);
+		margin-top: 1em;
 	}
 }
+

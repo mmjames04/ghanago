@@ -7,10 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>GhanaGo</h1>
-<h2>Where are you GhanaGo?</h2>
+	<header>
+		<span id="logo"> 
+			<%=image_tag("ghanago.jpg")%>
+		</span>
+	</header>
+	<%= yield %>
 
-<%= yield %>
-
+	<footer>
+		<a href='/travelers/new'>Register for personalized travel information!</a>
+	</footer>
 </body>
 </html>
